@@ -1,0 +1,8 @@
+development:
+  access_token: 9078100d1732dbe5becc13996b124cda
+  password: 9078100d1732dbe5becc13996b124cda
+  theme_id: 166584196
+  store: aliensearchparty.myshopify.com
+  bucket_size: 40
+  refill_rate: 2
+  timeout: 30s
