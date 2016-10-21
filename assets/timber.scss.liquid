@@ -459,6 +459,7 @@ $class-type: unquote(".");
 ==============================================================================*/
 #{$class-type}grid,
 #{$class-type}grid-uniform {
+  color: white;
   list-style:none;
   margin:0;
   padding:0;
@@ -1922,8 +1923,10 @@ label.error {
   }
 
   .icon {
-    font-size: 30px;
-    line-height: 26px;
+    font-size: 60px;
+    line-height: 24px;
+    padding: 10px;
+
   }
 
   a {
@@ -3789,7 +3792,6 @@ $shareBorderColor: $colorBorder;
   #Cart Page
 ==============================================================================*/
 @include at-query ($min, $large) {
-  background-color: $white;
   .template-cart .cart-wrapper {
     max-width: 85%;
     margin: 0 auto ($gutter * 2);
@@ -3852,6 +3854,7 @@ $shareBorderColor: $colorBorder;
 }
 
 .cart-item__remove {
+  color: white;
   display: block;
 }
 

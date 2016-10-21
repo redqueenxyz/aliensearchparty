@@ -131,6 +131,7 @@ $max: max-width;
 }
 
 .ajaxifyCart-loader {
+
   display: none;
   opacity: 0;
   position: absolute;
@@ -256,6 +257,7 @@ input.update-cart {
   @include backface(hidden);
 
   input[type="text"] {
+    color: white;
     opacity: 0.8;
     display: block;
     background: none;
@@ -271,7 +273,8 @@ input.update-cart {
 }
 
 .js--qty-adjuster {
-  color: $colorBorder;
+  font-size: em(25px);
+  color: white;
   cursor: pointer;
   position: absolute;
   display: block;
@@ -290,11 +293,11 @@ input.update-cart {
 
   &:hover,
   &:focus {
-    color: darken($colorBorder, 10%);
+    color: white;
   }
 
   &:active {
-    color: darken($colorBorder, 10%);
+    color: white;
   }
 }
 
@@ -337,7 +340,6 @@ input.update-cart {
 
 .ajaxifyCart--qty-adjuster {
   @extend .js--qty-adjuster;
-  opacity: 0;
 
   .cart-row:hover &,
   .ajaxifyCart--product:hover &,
@@ -619,6 +621,7 @@ input.update-cart {
   Ajaxify Drawer
 ==============================================================================*/
 .ajaxify-drawer {
+
   height: 0px;
   overflow: hidden;
   border-bottom: 0px solid transparent;
@@ -628,8 +631,8 @@ input.update-cart {
 
   &.is-visible {
     @include transition(all 550ms cubic-bezier(0.47, 0, 0, 0.95));
-    border-bottom: 1px solid $colorBorder;
-    background-color: #fff;
+    background-color: #000;
+    opacity: 0.75;
   }
 
   .update-cart {

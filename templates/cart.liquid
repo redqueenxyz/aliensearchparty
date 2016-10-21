@@ -3,20 +3,24 @@
 
   <form action="/cart" method="post" novalidate class="cart-wrapper">
     <div class="section-header text-center">
+      {% comment %}
       <h1>{{ 'cart.general.title' | t }}</h1>
+      {% endcomment %}
     </div>
 
     <div class="medium-down--hide">
       <div class="grid--full">
         <div class="grid-item large--one-half">
+{% comment %}
           <span class="table-header">{{ 'cart.label.product' | t }}</span>
+{% endcomment %}
         </div>
         <div class="grid-item large--one-half">
           <div class="grid--full">
-            <div class="grid-item one-half text-center">
+             <div class="grid-item one-half text-center">
               <span class="table-header">{{ 'cart.label.quantity' | t }}</span>
             </div>
-            <div class="grid-item one-half text-right">
+      <div class="grid-item one-half text-right">
               <span class="table-header">{{ 'cart.label.total' | t }}</span>
             </div>
           </div>
@@ -32,11 +36,11 @@
             <div class="grid">
 
               <div class="grid-item one-half large--two-thirds">
-                <a href="{{ item.url }}" class="h5">
+                <a href="{{ item.url }}" class="h2">
                   {{ item.product.title }}
                 </a>
                 {% if item.product.variants.size > 1 %}
-                  <div class="cart-item__variant">{{ item.variant.title }}</div>
+                  <h3> <div class="cart-item__variant">{{ item.variant.title }}</div> </h3>
                 {% endif %}
 
                 {% assign property_size = item.properties | size %}

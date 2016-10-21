@@ -94,9 +94,9 @@
 			"remove": "Remove",
 			"note": "Special instructions for seller",
 			"subtotal": "Subtotal",
-			"taxes_extra": "Shipping, taxes, and discounts will be calculated at checkout.",
+			"taxes_extra": "",
 			"update": "Update Cart",
-			"checkout": "Check Out",
+			"checkout": "Checkout with Shopify",
 			"empty": "Your cart is currently empty.",
 			"continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
 			"savings_html": "You're saving {{ price }}"

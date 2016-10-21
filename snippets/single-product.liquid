@@ -127,12 +127,12 @@
             {% if on_sale %}
               <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
             {% endif %}
-            <span id="productPrice" class="product-price {% if on_sale %}sale-price{% endif %}" itemprop="price" content="{{ variant.price }}">
-              {% include 'price' with variant.price  %}
-          
+            <span id="productPrice" class="product-price {% if on_sale %}sale-price{% endif %}" itemprop="price" content="{{ variant.price | money_without_currency | remove: '.00' }}">
+              {% include 'price' with variant.price %}
+
             </span>
           </div>
-          
+
 			<br>
           			<br>
 			<br>
