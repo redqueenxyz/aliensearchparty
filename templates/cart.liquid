@@ -1,6 +1,7 @@
 <!-- templates/cart.liquid -->
-{% if cart.item_count > 0 %}
 
+{% if cart.item_count > 0 %}
+<div class="cart-background">
   <form action="/cart" method="post" novalidate class="cart-wrapper">
     <div class="section-header text-center">
       {% comment %}
@@ -36,11 +37,15 @@
             <div class="grid">
 
               <div class="grid-item one-half large--two-thirds">
-                <a href="{{ item.url }}" class="h2">
+
+                <!-- Remove confusing Cart URL href="{{ item.url }}"-->
+                <a class="h4">
+
                   {{ item.product.title }}
                 </a>
+
                 {% if item.product.variants.size > 1 %}
-                  <h3> <div class="cart-item__variant">{{ item.variant.title }}</div> </h3>
+                  <div class="cart-item__variant" class="h3">{{ item.variant.title }}</div>
                 {% endif %}
 
                 {% assign property_size = item.properties | size %}
@@ -81,7 +86,7 @@
 
               <div class="grid-item one-half large--text-right">
                 <span class="label cart-mini-labels">{{ 'cart.label.total' | t }}</span>
-                <span class="h3">
+                <span class="h2">
                   {% if item.original_line_price != item.line_price %}
                     <small class="cart-item__original-price"><s>{% include 'price' with item.original_line_price %}</s></small>
                   {% endif %}
@@ -112,7 +117,12 @@
             </div>
           </div>
         {% endif %}
+        <!--
+        Drops the subtotal section (update if discounts or whatever)
+      -->
+
         <div class="grid-item cart-subtotal {% if settings.cart_notes_enable %}large--seven-twelfths{% endif %}">
+          <!--
           <span class="label cart-subtotal__label">{{ 'cart.general.subtotal' | t }}</span>
           <span class="h3 cart-subtotal__price">
             {% include 'price' with cart.total_price %}
@@ -122,6 +132,7 @@
             <small class="cart-subtotal__savings">{{ 'cart.general.savings_html' | t: price: savings }}</small>
           {% endif %}
           <p class="cart-subtotal__note"><em>{{ 'cart.general.taxes_extra' | t }}</em></p>
+          -->
 
           <input type="submit" name="update" class="btn-secondary update-cart" id="updateCart" value="{{ 'cart.general.update' | t }}">
           <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
@@ -130,19 +141,23 @@
             <div class="cart__additional-checkout-buttons">
               {{ content_for_additional_checkout_buttons }}
             </div>
+
           {% endif %}
         </div>
       </div>
     </div>
 
   </form>
-
+</div>
 {% else %}
+<div class="cart-background">
+
   <div class="section-header text-center">
     <h2>{{ 'cart.general.title' | t }}</h2>
   </div>
-  <div class="text-center">
+  <div class="text-center" class="h3">
     <p>{{ 'cart.general.empty' | t }}</p>
     <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
   </div>
+</div>
 {% endif %}

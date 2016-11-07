@@ -90,15 +90,15 @@
 	},
 	"cart": {
 		"general": {
-			"title": "Shopping Cart",
+			"title": "",
 			"remove": "Remove",
 			"note": "Special instructions for seller",
 			"subtotal": "Subtotal",
 			"taxes_extra": "",
 			"update": "Update Cart",
 			"checkout": "Checkout with Shopify",
-			"empty": "Your cart is currently empty.",
-			"continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
+			"empty": "ayy lmao",
+			"continue_browsing_html": "<a href=\"./\">👽<\/a>",
 			"savings_html": "You're saving {{ price }}"
 		},
 		"label": {
@@ -273,7 +273,7 @@
 			"more": "More"
 		},
 		"cart": {
-			"title": "Cart"
+			"title": ""
 		},
 		"customer": {
 			"view_account": "View Account",

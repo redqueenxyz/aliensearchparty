@@ -14,6 +14,9 @@
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
 
   <div class="grid">
+    <br><br><BR>
+    <!-- Dropping Product TItle -->
+    <!--
     <div class="grid-item text-center item-product-title">
       {% if collection.handle and template != 'index' %}
         <a href="{{ collection.url }}" class="h3 collection-title" item-prop="collection">{{ collection.title }}</a>
@@ -23,6 +26,7 @@
         <h2 class="product-meta" itemprop="brand">{{ product.vendor }}</h2>
       {% endif %}
     </div>
+  -->
 
     <div class="grid-item medium--four-sixths large--four-sixths push--one-sixth item-product-photo">
       <div class="product-photo-container" id="productPhoto">
@@ -116,6 +120,9 @@
             {% assign on_sale = false %}
           {% endif %}
 
+          <br><br><br>
+
+
           <div class="form-item-container price-container">
             {% if on_sale %}
               <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
@@ -132,6 +139,8 @@
 
             </span>
           </div>
+
+
 
 			<br>
           			<br>
