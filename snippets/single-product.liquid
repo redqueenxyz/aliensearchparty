@@ -14,7 +14,9 @@
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
 
   <div class="grid">
-    <br><br><BR>
+
+    <br><br><br>
+
     <!-- Dropping Product TItle -->
     <!--
     <div class="grid-item text-center item-product-title">
@@ -35,13 +37,14 @@
       </div>
     </div>
 
+<br><br>
     <div class="grid-item medium--one-sixth large--one-sixth push--one-sixth item-product-thumbnails">
       {% comment %}
         Create thumbnails if we have more than one product image
       {% endcomment %}
       {% if product.images.size > 1 %}
         <ul class="product-photo-thumbs" id="productThumbs">
-
+<br><br>
           {% for image in product.images %}
             <li>
               {% if image == featured_image %}
@@ -98,7 +101,7 @@
 
             -->
 
-<br>
+<br><br>
 
 <div class="form-item-container price-container">
   {% if on_sale %}

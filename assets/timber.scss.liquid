@@ -264,8 +264,8 @@ $socialIconFontStack: 'icons';
     .fullscreen-bg {
       position: fixed;
       z-index: -1001;
-      transform: scale(1.125);
-        background: url('https://storage.googleapis.com/aliensearchparty/demo.gif') center center / cover repeat;
+      transform: scale(1.25);
+        background: url('https://storage.googleapis.com/aliensearchparty/demo.gif') center center / cover no-repeat;
     }
 
     .fullscreen-bg__video {
@@ -282,6 +282,8 @@ $socialIconFontStack: 'icons';
   background-image: url('https://67.media.tumblr.com/d2d4692281df5588ce5d895e8a647af9/tumblr_nelbxg7ZzG1u0eng7o1_400.gif');
   background-repeat: repeat;
   background-position: center;
+
+  top: -50%;
 
   transform: scale(1.25);
   opacity: 0.20;
@@ -3167,7 +3169,7 @@ $shareBorderColor: $colorBorder;
 }
 
 .product-photo-thumb {
-  opacity: 0.4;
+  opacity: 0.60;
   max-width: 70px;
   margin-right: 0;
   margin-left: auto;
@@ -3180,7 +3182,7 @@ $shareBorderColor: $colorBorder;
   }
 
   &:hover {
-    opacity: 0.75;
+    opacity: 0.90;
     @include transition(opacity 1s ease-in);
   }
 
@@ -3249,7 +3251,7 @@ $shareBorderColor: $colorBorder;
   .product-price {
     color: $colorHeading;
     font-family: $headerFontStack;
-    font-size: em(24px);
+    font-size: em(28px);
     display: inline-block;
 
     &.sale-price {
