@@ -98,14 +98,14 @@
 			"update": "Update Cart",
 			"checkout": "Checkout with Shopify",
 			"empty": "ayy lmao",
-			"continue_browsing_html": "<a href=\"./\">👽<\/a>",
+			"continue_browsing_html": "<a href=\".\/\">👽<\/a>",
 			"savings_html": "You're saving {{ price }}"
 		},
 		"label": {
 			"product": "Product",
 			"quantity": "Quantity",
 			"total": "Total",
-			"add_note": "Add a note to your order"
+			"add_note": "ayy lmao"
 		}
 	},
 	"collections": {

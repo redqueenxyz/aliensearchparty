@@ -7,8 +7,8 @@
 <head>
 
 
-  <!-- Friz Font.css ================================================== -->
-  {{ "font.css"  | asset_url | stylesheet_tag }}
+  <!-- Friz Font ================================================== -->
+  {{ "font-FrizQua-BoldItal.css"  | asset_url | stylesheet_tag }}
 
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
@@ -76,6 +76,7 @@
 
 
 
+
 <div class="fullscreen-bg">
   		<!-- Webm works for Chrome testing; fix the other two -->
           <video loop muted autoplay poster="https://storage.googleapis.com/aliensearchparty/demo.gif" class="fullscreen-bg__video">
@@ -89,6 +90,11 @@
         <!-- source src="http://dev2.slicejack.com/fullscreen-video-demo/video/big_buck_bunny.ogv" type="video/ogg" -->
     </video>
 </div>
+
+
+<div class="gif-background">
+  </div>
+
 
   <header class="site-header" role="banner">
       <div class="wrapper">
@@ -260,9 +266,16 @@
       <div class="grid">
         <div class="grid-item wrapper-legal large--one-half">
           <p>
-            <small>&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}.</small>
+            <!--
+            <small>&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small>
+            <br>
             <small>{{ powered_by_link }}</small>
+          -->
+          <font size="6">
+          <a href='www.aliensearchparty.com'> 👽</a> &plus; <a href='https://www.shopify.com/'><img src='https://eveyevents.com/assets/shopify-logo-3ec0c21665e144ad0c58b9a883a31a70.png' alt="Powered by Shopify" height="33"></img></a>
+        </font>
           </p>
+
         </div>
         {% comment %}
           Loop through available payment methods and show their icons.

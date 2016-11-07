@@ -1,7 +1,6 @@
 <!-- templates/cart.liquid -->
 
 {% if cart.item_count > 0 %}
-<div class="cart-background">
   <form action="/cart" method="post" novalidate class="cart-wrapper">
     <div class="section-header text-center">
       {% comment %}
@@ -159,5 +158,4 @@
     <p>{{ 'cart.general.empty' | t }}</p>
     <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
   </div>
-</div>
 {% endif %}

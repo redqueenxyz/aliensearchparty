@@ -89,6 +89,36 @@
               - http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options#update-product-liquid
 
           {% endcomment %}
+          <!-- Quantity counter
+          <div id="variant-inventory" class='h2'>
+              {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+              {{ product.variants.first.inventory_quantity }}
+              {% endif %}
+            </div>
+
+            -->
+
+<br>
+
+<div class="form-item-container price-container">
+  {% if on_sale %}
+    <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+    <span class="compare-price" id="comparePrice">
+      {% include 'price' with variant.compare_at_price %}
+    </span>
+  {% endif %}
+
+  {% if on_sale %}
+    <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+  {% endif %}
+  <span id="productPrice" class="product-price {% if on_sale %}sale-price{% endif %}" itemprop="price" content="{{ variant.price | money_without_currency | remove: '.00' }}">
+    {% include 'price' with variant.price %}
+
+  </span>
+</div>
+
+<br><br>
+
           <select name="id" id="productSelect" class="product-variants">
             {% for variant in product.variants %}
               {% if variant.available %}
@@ -120,31 +150,7 @@
             {% assign on_sale = false %}
           {% endif %}
 
-          <br><br><br>
-
-
-          <div class="form-item-container price-container">
-            {% if on_sale %}
-              <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-              <span class="compare-price" id="comparePrice">
-                {% include 'price' with variant.compare_at_price %}
-              </span>
-            {% endif %}
-
-            {% if on_sale %}
-              <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-            {% endif %}
-            <span id="productPrice" class="product-price {% if on_sale %}sale-price{% endif %}" itemprop="price" content="{{ variant.price | money_without_currency | remove: '.00' }}">
-              {% include 'price' with variant.price %}
-
-            </span>
-          </div>
-
-
-
-			<br>
-          			<br>
-			<br>
+          <br><br>
 
           <div class="form-item-container add-to-cart-container">
             <button type="submit" name="add" id="addToCart" class="btn btn-add-to-cart ">
@@ -153,12 +159,17 @@
               </span>
               <span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span>
             </button>
+
+
+
+<!-- Low Stock Warning; Removed>
             <div class="low-stock-container icon-fallback-text">
               {% if settings.product_quantity_message %}
                 <span class="icon icon-warning" aria-hidden="true"><span class="fallback-text">{{ 'products.product.low_stock_warning' | t }}</span></span>
                 <span id="variantQuantity" class="variant-quantity"></span>
               {% endif %}
             </div>
+-->
           </div>
         </form>
       </div>
@@ -203,6 +214,20 @@
       variant: variant,
       selector: selector
     });
+
+    if (variant) {
+  if (variant.inventory_management == "shopify" && variant.inventory_policy != "continue") {
+    if (variant.inventory_quantity > 0) {
+      jQuery('#variant-inventory').text(variant.inventory_quantity + ' LEFT.');
+    } else {
+      jQuery('#variant-inventory').text("None remaining");
+    }
+  } else {
+    jQuery('#variant-inventory').text("This product is available");
+  }
+} else {
+    jQuery('#variant-inventory').text("");
+}
   };
 
   jQuery(function($) {
