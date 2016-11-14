@@ -170,6 +170,7 @@ input.update-cart {
 .ajaxifyCart--content {
   position: relative;
   background-color: $colorBody;
+  transform: scale(1.25);
   @include perspective(1000px);
   @include transform-style(preserve-3d);
   @include transition(all 450ms cubic-bezier(0.57,.06,.05,.95));
@@ -330,7 +331,7 @@ input.update-cart {
   @include transition(all 0.1s ease-out);
 
   .supports-no-touch & {
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid;
   }
 
   .cart-row:hover &,

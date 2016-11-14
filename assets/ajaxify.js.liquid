@@ -130,6 +130,9 @@ Shopify.onError = function(XMLHttpRequest, textStatus) {
   POST to cart/add.js returns the JSON of the line item associated with the added item
 ==============================================================================*/
 Shopify.addItem = function(variant_id, quantity, callback) {
+
+
+
   var quantity = quantity || 1;
   var params = {
     type: 'POST',
@@ -232,6 +235,7 @@ Shopify.changeItem = function(variant_id, quantity, callback) {
   Ajaxify Shopify Add To Cart
 ==============================================================================*/
 var ajaxifyShopify = (function(module, $) {
+
 
   'use strict';
 
@@ -507,6 +511,8 @@ var ajaxifyShopify = (function(module, $) {
   };
 
   drawerSetup = function () {
+
+
     // Create drawer DOM elements with handlebars.js template
     var source   = $("#drawerTemplate").html(),
         template = Handlebars.compile(source),
@@ -710,6 +716,7 @@ var ajaxifyShopify = (function(module, $) {
 
   flipCartUpdateCallback = function (cart) {
     buildCart(cart);
+
   };
 
   buildCart = function (cart) {
@@ -819,6 +826,7 @@ var ajaxifyShopify = (function(module, $) {
 
   cartTemplate = function (cart) {
     $cartContainer.load('/cart form[action="/cart"]', function() {
+
 
       // With new elements we need to relink the adjust cart functions
       adjustCart();

@@ -21,8 +21,6 @@
   <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
   <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
 
-  {% comment %}
-
   {% if settings.home_page_content != blank %}
    <meta property="og:description" content="{{ pages[settings.home_page_content].content | strip_html | escape }}">
   {% else %}
@@ -77,5 +75,4 @@
     <meta property="og:description" content="{{ page_description | escape }}">
   {% endif %}
 {% endunless %}
-
 <meta property="og:site_name" content="{{ shop.name }}">

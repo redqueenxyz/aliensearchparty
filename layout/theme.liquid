@@ -79,11 +79,11 @@
 
 <div class="fullscreen-bg">
   		<!-- Webm works for Chrome testing; fix the other two -->
-          <video loop muted autoplay poster="https://storage.googleapis.com/aliensearchparty/demo.gif" class="fullscreen-bg__video">
+          <video loop muted autoplay poster={{ 'wallpaper.gif' | asset_url }} class="fullscreen-bg__video">
 
-            <source src="https://storage.googleapis.com/aliensearchparty/demo.webm" type="video/webm">
-            <source src="https://storage.googleapis.com/aliensearchparty/demo.mp4" type="video/mp4">
-            <source src="https://storage.googleapis.com/aliensearchparty/demo.ogv" type="video/ogv">
+            <source src={{ 'wallpaper.webm' | asset_url }} type="video/webm">
+            <source src={{ 'wallpaper.mp4' | asset_url }} type="video/mp4">
+            <source src={{ 'wallpaper.ogv' | asset_url }} type="video/ogv">
 
         <!-- source src="http://dev2.slicejack.com/fullscreen-video-demo/video/big_buck_bunny.webm" type="video/webm" -->
         <!-- source src="http://dev2.slicejack.com/fullscreen-video-demo/video/big_buck_bunny.mp4" type="video/mp4" -->

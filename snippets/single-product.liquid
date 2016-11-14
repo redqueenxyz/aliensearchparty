@@ -237,7 +237,7 @@
     new Shopify.OptionSelectors('productSelect', {
       product: {{ product | json }},
       onVariantSelected: selectCallback,
-      enableHistoryState: true
+      enableHistoryState: false
     });
 
     // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
