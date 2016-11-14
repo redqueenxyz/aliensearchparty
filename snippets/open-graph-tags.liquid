@@ -18,6 +18,11 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
+  <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
+
+  {% comment %}
+
   {% if settings.home_page_content != blank %}
    <meta property="og:description" content="{{ pages[settings.home_page_content].content | strip_html | escape }}">
   {% else %}
@@ -28,8 +33,8 @@
      {% capture slide %}slide_{{ i }}{% endcapture %}
      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
      {% if settings[slide] %}
-       <meta property="og:image" content="http:{{ slide_img | asset_img_url: '1024x1024' }}">
-       <meta property="og:image:secure_url" content="https:{{ slide_img | asset_img_url: '1024x1024' }}">
+       <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
+       <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
      {% endif %}
     {% endfor %}
   {% endif %}
@@ -38,8 +43,8 @@
   <meta property="og:title" content="{{ product.title | strip_html | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   {% for image in product.images limit:3 %}
-  <meta property="og:image" content="http:{{ image.src | img_url: '1024x1024' }}">
-  <meta property="og:image:secure_url" content="https:{{ image.src | img_url: '1024x1024' }}">
+  <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
+  <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
   {% endfor %}
   <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}">
   <meta property="og:price:currency" content="{{ shop.currency }}">
@@ -48,23 +53,23 @@
   <meta property="og:title" content="{{ article.title | strip_html | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   {% if article.image %}
-    <meta property="og:image" content="http:{{ article | img_url: '1024x1024' }}">
-    <meta property="og:image:secure_url" content="https:{{ article | img_url: '1024x1024' }}">
+    <meta property="og:image" content="http:{{ article | img_url: 'large' }}">
+    <meta property="og:image:secure_url" content="https:{{ article | img_url: 'large' }}">
   {% endif %}
 {% elsif template == 'password' %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ shop.name | escape }}">
   <meta property="og:url" content="{{ shop.url }}">
   {% if settings.logo_use_image %}
-  <meta property="og:image" content="http:{{ 'logo.png' | asset_url }}">
-  <meta property="og:image:secure_url" content="https:{{ 'logo.png' | asset_url }}">
+  <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
+  <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
   {% endif %}
 {% else %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title | escape }}">
   {% if settings.logo_use_image %}
-  <meta property="og:image" content="http:{{ 'logo.png' | asset_url }}">
-  <meta property="og:image:secure_url" content="https:{{ 'logo.png' | asset_url }}">
+  <meta property="og:image" content="http:{{ 'aliens.gif' | asset_url }}">
+  <meta property="og:image:secure_url" content="https:{{ 'aliens.gif' | asset_url }}">
   {% endif %}
 {% endif %}
 {% unless template contains 'index' %}
@@ -72,4 +77,5 @@
     <meta property="og:description" content="{{ page_description | escape }}">
   {% endif %}
 {% endunless %}
+
 <meta property="og:site_name" content="{{ shop.name }}">
