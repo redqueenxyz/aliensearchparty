@@ -111,7 +111,7 @@ $colorLinks: {{ settings.color_links }};
 $colorPaymentIcons: {{ settings.color_payment_icons }};
 
 // Backgrounds
-$colorBody: #000; // {{ settings.color_body_bg }}
+$colorBody: #fff; // {{ settings.color_body_bg }}
 $colorBg: transparent;
 
 // Border colors
@@ -265,7 +265,7 @@ $socialIconFontStack: 'icons';
       position: fixed;
       z-index: -1001;
       transform: scale(1.25);
-        background: url('https://storage.googleapis.com/aliensearchparty/demo.gif') center center / cover no-repeat;
+        background: url('{{ 'wallpaper.gif' | asset_url }}') center center / cover no-repeat;
     }
 
     .fullscreen-bg__video {
