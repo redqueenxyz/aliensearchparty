@@ -4,4 +4,4 @@ Alien Search Party is an [online art collective](https://www.instagram.com) that
 
 This code is the custom theme for it's [Shopify store](http://aliensearchparty.com). It generates the following:
 
-![](https://github.com/redqueenxyz/aliensearchparty/blob/master/site_recording.gif)
+![](/site_recording.gif)
