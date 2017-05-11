@@ -2,6 +2,6 @@
 
 Alien Search Party is an [online art collective](https://www.instagram.com) that has limited runs of [branded merchandise](http://aliensearchparty.com). 
 
-This code it's [Shopify store](http://aliensearchparty.com). It renders the following:
+This code is the custom theme for it's [Shopify store](http://aliensearchparty.com). It generates the following:
 
-1[](site_Recording.gif)
+![](site_Recording.gif)
